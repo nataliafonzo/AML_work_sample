@@ -9,7 +9,7 @@ This repository contains the files needed to train and evaluate the performance 
 - `feature_extraction.py` defines the function that **extracts features** from the json file.
 - `dummies_transformer.py`, `fillnan_transformer.py`, `features_selector.py`  are found in the `transformers` folder. These files define the classes involved in the pipeline's **pre-processing steps**.
 - `settings.py` contains the model's **hyperparameters** and auxiliary lists of columns/features involved in the pre-processing and training steps.
-- `classifier.py` **defines the model's class** and a function to **train** it.
+- `classifier.py` defines the **model's class** and a function to **train** it.
 
 An `environment.yml` file is also provided to create a conda environment with all required packages installed.
 
