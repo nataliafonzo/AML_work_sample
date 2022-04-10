@@ -25,8 +25,7 @@ import json
 import time
 
 from feature_extraction import clean_nulls, extract_features
-from model import ClassificationPredictor
-from train import train
+from classifier import ClassificationPredictor, train
 
 from sklearn.metrics import accuracy_score, precision_score, recall_score
 
@@ -68,5 +67,3 @@ if __name__ == "__main__":
     precision = round(precision_score(y_pred,y_test,pos_label="used"),2)
     recall = round(recall_score(y_pred,y_test,pos_label="used"),2)
     print("""\nPerformance in test set \n\nAccuracy = {} \nPrecision = {} \nRecall = {}""".format(accuracy,precision,recall))
-    
-
