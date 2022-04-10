@@ -24,11 +24,11 @@ Make sure you save `MLA_100k.jsonlines` in the just-cloned AML_work_sample folde
 ```
 $ cd ./AML_work_sample
 ```
-Create a conda environment as follows: 
+Create a conda environment as follows. This will also install the required Python packages:
 ```
 $ conda env create -f environment.yml
 ``` 
-This will also install the required Python packages. Activate the environment:
+Activate the environment:
 ```
 $ conda activate AML_work_sample
 ```
