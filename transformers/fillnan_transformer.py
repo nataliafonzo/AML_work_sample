@@ -15,7 +15,7 @@ class FillNaNTransformer(BaseEstimator, TransformerMixin):
         if isinstance(X, pd.DataFrame):
             for column in self.fill_nan_columns:
                 X[column] = X[column].fillna(self.deciles(self.train_dataset, column, self.train_target))
-            print("FillNaNTransformer excecuted")
+            print("FillNaNTransformer executed")
             return X
         else:
             raise TypeError("This transformer only works with Pandas data frames.")
