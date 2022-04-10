@@ -36,7 +36,7 @@ class DummiesTransformer(BaseEstimator, TransformerMixin):
             X = get_dummies(X, columns=self.categoric_columns, dummy_na = True)
             for missing_column in [x for x in list(self.dummies_columns) if x not in list(X.columns)]:
                 X[missing_column] = 0
-            print("DummiesTransformer excecuted")
+            print("DummiesTransformer executed")
             return X
         else:
             raise TypeError("This transformer only works with Pandas data frames.")
