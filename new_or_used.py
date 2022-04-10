@@ -27,7 +27,7 @@ import time
 from feature_extraction import clean_nulls, extract_features
 from classifier import ClassificationPredictor, train
 
-from sklearn.metrics import accuracy_score, precision_score, recall_score
+from sklearn.metrics import accuracy_score, recall_score
 
 
 def build_dataset():
@@ -64,6 +64,5 @@ if __name__ == "__main__":
     print("Training done. Initiating performance evaluation...")
     y_pred = model.predict(X_test)
     accuracy = round(accuracy_score(y_pred,y_test),2)
-    precision = round(precision_score(y_pred,y_test,pos_label="used"),2)
     recall = round(recall_score(y_pred,y_test,pos_label="used"),2)
-    print("""\nPerformance in test set \n\nAccuracy = {} \nPrecision = {} \nRecall = {}""".format(accuracy,precision,recall))
+    print("""\nPerformance in test set \n\nAccuracy = {} \nRecall = {}""".format(accuracy,recall))
