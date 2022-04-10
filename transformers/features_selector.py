@@ -11,7 +11,7 @@ class FeaturesSelector(BaseEstimator, TransformerMixin):
     def transform(self, X, *_):
         if isinstance(X, DataFrame):
             X = X[self.features]
-            print("FeaturesSelector excecuted")
+            print("FeaturesSelector executed")
             return X
         else:
             raise TypeError("This transformer only works with Pandas data frames.")
